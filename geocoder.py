@@ -26,8 +26,9 @@ def main():
     else:
       return x.longitude
 
-  geolocator = Nominatim()
-  # geolocator = GoogleV3(timeout=5)
+  geolocator = GoogleV3(api_key="", timeout=5)
+  # geolocator = Nominatim()
+  # get api key for googlev3 at https://developers.google.com/maps/documentation/geocoding/usage-limits or https://console.developers.google.com/
   # uncomment the geolocator you want to use
   # change the timeout value if you get a timeout error, for instance, geolocator = Nominatim(timeout=60)
   # io[namecolumn] is a series or object dtype, you apply action to an entire series not a single value
