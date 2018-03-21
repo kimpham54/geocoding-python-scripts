@@ -12,11 +12,12 @@ def main():
 
   def get_latitude(x):
     # print(x)
-    if x is None:
+    if x is None: # if geocoding attempt failed, resulting in Nonetype
       return x
     else:
       return x.latitude
     # how do i assign an int or any value to x if it's none? how do i get the initial input x?
+    # could use lambda function here. x is original value in the series type if it's been successfully geocoded.
 
   def get_longitude(x):
     # print(x)
@@ -25,7 +26,7 @@ def main():
     else:
       return x.longitude
 
-  geolocator = Nominatim(timeout=5)
+  geolocator = Nominatim()
   # geolocator = GoogleV3(timeout=5)
   # uncomment the geolocator you want to use
   # change the timeout value if you get a timeout error, for instance, geolocator = Nominatim(timeout=60)
